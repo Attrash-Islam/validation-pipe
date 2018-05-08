@@ -26,3 +26,6 @@ console.log("valid final result", useTheComplexAbove.valid); // false
 // Usage with External Libraries that implement the same IValidator interface -> (value: any) => boolean
 const isNotNullNorUndefinedValidator =
   ValidationPipe([x => !_isUndefined(x), x => !_isNull(x)]);
+
+console.log(isNotNullNorUndefinedValidator(null)); // false
+console.log(isNotNullNorUndefinedValidator("Functional JavaScript!")); // true
